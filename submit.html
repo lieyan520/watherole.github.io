@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我要投稿 - 哈比列车谋杀案</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🍎</span>哈基苹果的列车服职业＆修饰符投稿站</a>
+    <nav>
+      <a href="index.html">浏览</a>
+      <a href="submit.html" class="active">投稿</a>
+      <span id="adminBtn" class="nav-admin">管理</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <h1>我要 <span>投稿</span></h1>
+    <p>提交你设计的职业或修饰符方案，提交后所有玩家都能在浏览页看到</p>
+  </section>
+
+  <section class="submit-page">
+    <div class="form-wrap">
+      <div class="tabs" id="submitTabs">
+        <button class="tab active" data-tab="job">职业投稿</button>
+        <button class="tab" data-tab="modifier">修饰符投稿</button>
+      </div>
+
+      <div id="toast" class="toast"></div>
+
+      <div class="form-panel active" id="jobFormPanel">
+        <h2>投稿职业</h2>
+        <p class="form-desc">设计一个新的职业方案。带 <span class="req">*</span> 为必填。</p>
+        <form id="jobForm">
+          <div class="row-2">
+            <div class="field">
+              <label>职业名称 <span class="req">*</span></label>
+              <input type="text" id="jobName" placeholder="起个豪庭的名字！" maxlength="40" required>
+            </div>
+            <div class="field">
+              <label>职业阵营 <span class="req">*</span></label>
+              <select id="jobFaction" required>
+                <option value="">选择阵营</option>
+                <option>平民</option>
+                <option>警长</option>
+                <option>独立胜利/特殊中立</option>
+                <option>杀手方中立</option>
+                <option>杀手</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>投稿者昵称 <span class="req">*</span></label>
+            <input type="text" id="jobAuthor" placeholder="你的游戏 ID" maxlength="30" required>
+          </div>
+          <div class="field">
+            <label>职业小结（选填）</label>
+            <input type="text" id="jobSummary" placeholder="一句话概括这个职业" maxlength="120">
+          </div>
+          <div class="field">
+            <label>职业描述 <span class="req">*</span></label>
+            <textarea id="jobDesc" placeholder="详细描述职业的能力、胜利条件、玩法机制..." rows="5" required></textarea>
+          </div>
+          <div class="field">
+            <label>职业商店</label>
+            <div class="shop-box">
+              <div id="shopList"><div class="shop-empty">暂无物品，点击下方按钮添加</div></div>
+              <button type="button" class="shop-add" id="addShopBtn">+ 添加商店物品</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>职业故事（选填）</label>
+            <textarea id="jobStory" placeholder="给你的角色编一个惊天地泣鬼神的背景故事吧！" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="jobSubmitBtn">提交投稿</button>
+        </form>
+      </div>
+
+      <div class="form-panel" id="modifierFormPanel">
+        <h2>投稿修饰符</h2>
+        <p class="form-desc">设计一个新的修饰符。带 <span class="req">*</span> 为必填。</p>
+        <form id="modifierForm">
+          <div class="row-2">
+            <div class="field">
+              <label>修饰符名称 <span class="req">*</span></label>
+              <input type="text" id="modName" placeholder="给你的修饰符起个响亮的名号！" maxlength="40" required>
+            </div>
+            <div class="field">
+              <label>投稿者昵称 <span class="req">*</span></label>
+              <input type="text" id="modAuthor" placeholder="你的游戏 ID" maxlength="30" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>修饰符描述 <span class="req">*</span></label>
+            <textarea id="modDesc" placeholder="描述修饰符的效果、触发条件..." rows="5" required></textarea>
+          </div>
+          <div class="field">
+            <label>修饰符故事（选填）</label>
+            <textarea id="modStory" placeholder="为什么修饰符会有背景故事啊！" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="modSubmitBtn">提交投稿</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><p>哈基苹果的列车服职业＆修饰符投稿站</p></footer>
+
+<script src="js/common.js"></script>
+<script src="js/submit.js"></script>
+</body>
+</html>

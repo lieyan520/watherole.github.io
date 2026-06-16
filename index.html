@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浏览投稿 - 哈比列车谋杀案</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🍎</span>哈基苹果的列车服职业＆修饰符投稿站</a>
+    <nav>
+      <a href="index.html" class="active">浏览</a>
+      <a href="submit.html">投稿</a>
+      <span id="adminBtn" class="nav-admin">管理</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <!-- <span class="hero-tag">我的世界模组 · 哈比列车谋杀案</span> -->
+    <!-- <h1>浏览 <span>职业</span> & <span>修饰符</span> 投稿</h1> -->
+    <!-- <p>查看所有玩家投稿的职业方案与修饰符设计</p> -->
+  </section>
+
+  <section class="section" id="browse">
+    <div class="tabs" id="browseTabs">
+      <button class="tab active" data-tab="job">职业投稿</button>
+      <button class="tab" data-tab="modifier">修饰符投稿</button>
+    </div>
+    <div class="section-head">
+      <h2 id="browseTitle">职业列表</h2>
+      <div class="filter-bar" id="filterBar"></div>
+    </div>
+    <div id="listContainer">
+      <div class="state-box"><div class="spinner"></div><p>加载中...</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><p>哈基苹果的列车服职业＆修饰符投稿站</p></footer>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div id="mTags"></div>
+    <h2 id="mTitle"></h2>
+    <div class="modal-meta" id="mMeta"></div>
+    <div id="mBody"></div>
+    <div class="modal-actions" id="modalActions">
+      <button class="btn btn-danger" id="modalDeleteBtn">删除此投稿</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/browse.js"></script>
+</body>
+</html>
